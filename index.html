@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba 3</title>
+</head>
+<body>
+  <section class="start_panel" id="startPanel">
+    <button class="btn" id="pVc"><span><i class="fa-solid fa-user"></i></span>VS<span><i class="fa-solid fa-display"></i></span></button>
+    <button class="btn" id="pVp"><span><i class="fa-solid fa-user"></i></span>VS<span><i class="fa-solid fa-user"></i></span></button>
+  </section>
+  <!-- SECCIÓN PRINCIPAL -->
+   <section class="main hidden" id="main">
+    <div class="main_topBtns">
+      <div class="topBtns_left topBtn">
+        <span><i class="fa-solid fa-xmark"></i></span>
+        <span><i class="fa-solid fa-o"></i></span>
+      </div>
+      <div class="topBtns_center topBtn"><span id="turnOf" class="fa-solid fa-xmark"></span> TURN</div>
+      <div class="topBtns_right topBtn">
+        <button id="reboot"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+      </div>
+    </div>
+    <div class="board_container" id="board"></div>
+    <div class="main_bottomBtns">
+      <div class="bottomBtn_item">
+        <p class="tittle">X(YOU)</p>
+        <p id="counterX"></p>
+      </div>
+      <div class="bottomBtn_item">
+        <p class="tittle">TIES</p>
+        <p id="totalCounter"></p>
+      </div>
+      <div class="bottomBtn_item">
+        <p class="tittle">O(CPU)</p>
+        <p id="counterO"></p>
+      </div>
+    </div>
+   </section> 
+
+   <div id="modalWin" class="modal hidden">
+    <div class="dialog_bar">
+      <p>YOU WON!</p>
+      <h2><span id="winner" class=""></span>TAKES THE ROUND</h2>
+      <div class="dialog_btns">
+        <button id="quit">QUIT</button>
+        <button id="next">NEXT ROUND</button>
+      </div>
+    </div>
+  </div>
+
+  <audio id="click"><source src="click.mp3" type="audio/mpeg"></audio>
+  <audio id="applause"><source src="applause.mp3" type="audio/mpeg"></audio>
+
+  <script src="https://kit.fontawesome.com/d91431c605.js" crossorigin="anonymous"></script>
+  <script type="module" src="script.js"></script>
+   <!-- <script src="object.js"></script> -->
+</body>
+</html>
