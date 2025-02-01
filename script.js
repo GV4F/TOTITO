@@ -7,6 +7,7 @@ const applause = document.getElementById("applause");
 // ===============================================================
 const turnOf = document.getElementById("turnOf");
 const reboot = document.getElementById("reboot");
+const rebootI = document.getElementById("rebootI");
 // ===============================================================
 const main = document.getElementById("main");
 const board = document.getElementById("board");
@@ -38,14 +39,14 @@ const modifyCounters = ()=>{
 // * Función para resetear el tablero
 const reset = ()=>{
   clickPlay();
-  reboot.classList.add("animated");
+  rebootI.classList.add("animated");
   turn = 0;
   attempts = 0;
   winner.className = "";
   boardArray = [undefined, undefined, undefined,undefined, undefined, undefined,undefined, undefined, undefined];
   if(turnOf.classList.contains("fa-o")){turnOf.classList.replace("fa-o", "fa-xmark");}
   initialBoard();
-  setTimeout(()=>{reboot.classList.remove("animated");},1600);
+  setTimeout(()=>{rebootI.classList.remove("animated");},1600);
 }
 // * Función que se activa cuando hay un empate
 const draw = ()=>{
